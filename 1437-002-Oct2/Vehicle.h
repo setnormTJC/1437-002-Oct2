@@ -6,26 +6,40 @@
 
 using namespace std; 
 
+/// <summary>
+/// This class allows creation of `Vehicle` objects
+/// Two member vars - one is maxSpeed (unit: mph) 
+/// </summary>
 class Vehicle
 {
-	//int numberOfLig
+	//string color; //optional 
+
 	int maxSpeed; 
 
-	//int wingspan; 
+	//bool carriesPeople; 
+	double volume; 
+
+	//int wingspan; //put in the Airplane class
 
 public: 
-	Vehicle(int mSpeed)
-	{
-		maxSpeed = mSpeed;
-	}
+	Vehicle(int mSpeed, double V);
 
 	void printVehicleDetails()
 	{
-		cout << "Max speed: " << maxSpeed << endl; 
+
+		cout << "Max speed: " << maxSpeed << "\t" << "Volume: " << volume << endl;
 	}
+
+	//void setVolume; 
+	//void setMaxSpeed(); 
+
+	void setAllVehicleAttribs(int mSpeed, double V);
 
 };
 
+/// <summary>
+/// wingSpan is in feet, maxHeight is in km
+/// </summary>
 class Airplane : public Vehicle//colon (:) means "inherits from" in C++ (Java -> extends) 
 {
 	int wingSpan; 
@@ -33,8 +47,8 @@ class Airplane : public Vehicle//colon (:) means "inherits from" in C++ (Java ->
 	int maxHeight; //the max height that you can fly up to (without suffering engine failure) 
 	
 public: 
-	Airplane(int mSpeed, int wSpan, int mHeight)
-		:Vehicle(mSpeed)
+	Airplane(int mSpeed, double V, int wSpan, int mHeight)
+		:Vehicle(mSpeed, V)
 	{
 		wingSpan = wSpan; 
 		maxHeight = mHeight; 
@@ -43,7 +57,7 @@ public:
 	//int getMaxSpeed
 	void printAirplaneDetails()
 	{
-		printVehicleDetails(); 
+		Vehicle::printVehicleDetails(); 
 		cout << "Wing span: " << wingSpan << "\tmax height: " << maxHeight << endl;
 	}
 
