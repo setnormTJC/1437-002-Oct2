@@ -8,7 +8,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Airplane">
-    <Position X="2" Y="2.75" Width="1.5" />
+    <Position X="2" Y="2.75" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AgAQAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAA=</HashCode>
       <FileName>Vehicle.h</FileName>

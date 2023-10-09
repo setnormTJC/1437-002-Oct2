@@ -22,13 +22,18 @@ class Vehicle
 	//int wingspan; //put in the Airplane class
 
 public: 
+
+	Vehicle(); //DECLARES that a function named "Vehicle" exists in class `Vehicle`
+
 	Vehicle(int mSpeed, double V);
 
-	void printVehicleDetails()
-	{
+	//void printVehicleDetails()
+	//{
 
-		cout << "Max speed: " << maxSpeed << "\t" << "Volume: " << volume << endl;
-	}
+	//	cout << "Max speed: " << maxSpeed << "\t" << "Volume: " << volume << endl;
+	//}
+
+	void print(); //declare 
 
 	//void setVolume; 
 	//void setMaxSpeed(); 
@@ -54,12 +59,16 @@ public:
 		maxHeight = mHeight; 
 	}
 
+	Airplane(int wSpan, int mHeight); 
+
 	//int getMaxSpeed
-	void printAirplaneDetails()
-	{
-		Vehicle::printVehicleDetails(); 
-		cout << "Wing span: " << wingSpan << "\tmax height: " << maxHeight << endl;
-	}
+	//void printAirplaneDetails()
+	//{
+	//	Vehicle::print(); 
+	//	cout << "Wing span: " << wingSpan << "\tmax height: " << maxHeight << endl;
+	//}
+
+	void print();
 
 //private: 
 
