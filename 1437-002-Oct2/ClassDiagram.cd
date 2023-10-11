@@ -1,18 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Vehicle">
-    <Position X="5" Y="0.5" Width="3" />
+  <Class Name="Animal">
+    <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAQAAAAAAAAABEAAAAAAAAAAAAACAAA=</HashCode>
-      <FileName>Vehicle.h</FileName>
+      <HashCode>AIAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source.cpp</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Airplane">
-    <Position X="2" Y="2.75" Width="3.25" />
+  <Class Name="Nose" Collapsed="true">
+    <Position X="3.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAQAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAAA=</HashCode>
-      <FileName>Vehicle.h</FileName>
+      <HashCode>AAAAAAAAAAAAIAAAAAAgAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source.cpp</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="Tail" Collapsed="true">
+    <Position X="9" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dog">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAIAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source.cpp</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="someNose" />
+      <Field Name="someTailObject" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
