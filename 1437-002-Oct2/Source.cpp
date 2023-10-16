@@ -34,31 +34,52 @@ class Animal
 
 class Nose //"class-happy" 
 {
-    int noseLength;
-    int noseWidth;
+    //int noseLength;
+    //int noseWidth;
     bool isPointy;
+public: 
+    void print()
+    {
+        cout << std::boolalpha; 
+        cout << "is pointy? " << isPointy << endl; 
+    }
 };
 
 class Tail
 {
+
     bool isBushy; 
     int length; 
+public: 
+    void print()
+    {
+        cout << std::boolalpha; 
+        cout << "isbushy: " << isBushy << "\t" << "length: " << length << " cm" << endl; 
+    }
 };
 
 class Dog : public Animal
 {
-    string petName; //"Ole yeller"
+    string petName = "ole yeller"; //"Ole yeller"
 
     Tail someTailObject; 
     Nose someNose; 
-};
+
+public: 
+    void print()
+    {
+        cout << "petname: " << petName << endl; 
+        someTailObject.print(); 
+        someNose.print(); 
+    }
+}; //end of Dog class definition
 
 
 using namespace std;
 
 int main()
 {
-    
+
     ////Vehicle tractor{ 10, 22.5 }; //10 was the top speed and 22.5 was the VOLUME
 
     ////cout << "BEFORE calling the setter: " << endl; 
@@ -80,8 +101,10 @@ int main()
 
     //Airplane belugaAirbus{ 147, 35'000 };
     //belugaAirbus.print();
+    //Dog firstDog{ "spot" };
+    Dog myDog{};
 
-
+    myDog.print(); 
 
 
     return 0;
