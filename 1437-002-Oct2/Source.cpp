@@ -32,25 +32,47 @@ class Animal
 };
 
 
+/// <summary>
+/// Nose objects have widths and isPointys (int, bool)
+/// </summary>
 class Nose //"class-happy" 
 {
     //int noseLength;
-    //int noseWidth;
+    int noseWidth;
     bool isPointy;
 public: 
+
+    Nose() {};
+    Nose(int noseWidth, bool isPointy)
+        :noseWidth(noseWidth), isPointy(isPointy) {};
+
+
+    /// <summary>
+    /// 
+    /// </summary>
     void print()
     {
         cout << std::boolalpha; 
-        cout << "is pointy? " << isPointy << endl; 
+        cout << "is pointy? " << isPointy << "nose WIDTH: " << noseWidth << endl;
     }
 };
 
+
+/// <summary>
+/// Tails have `isBushy` and `length` as member vars (bool, int)
+/// </summary>
 class Tail
 {
 
-    bool isBushy; 
-    int length; 
+    bool isBushy; //autoinitializes to FALSE 
+    int length;  //length autoinitializes to "garbage"
 public: 
+    Tail() {};
+    Tail(bool isBushy, int length)
+        :isBushy(isBushy), length(length)
+    {
+    };
+
     void print()
     {
         cout << std::boolalpha; 
@@ -58,14 +80,30 @@ public:
     }
 };
 
-class Dog : public Animal
+class Dog //: public Animal
 {
     string petName = "ole yeller"; //"Ole yeller"
 
-    Tail someTailObject; 
+    Tail someTailObject/*{}*/;
     Nose someNose; 
 
 public: 
+
+    Dog()
+    {
+        //empty
+    };
+
+    Dog(string pName,
+        bool isB, int tLength,
+        int nWidth, bool isP)
+        :someTailObject(isB, tLength), someNose(nWidth, isP)
+    {
+        petName = pName; 
+
+        //Tail tailObject()
+
+    }
     void print()
     {
         cout << "petname: " << petName << endl; 
@@ -102,9 +140,24 @@ int main()
     //Airplane belugaAirbus{ 147, 35'000 };
     //belugaAirbus.print();
     //Dog firstDog{ "spot" };
-    Dog myDog{};
+    Dog myDog{"Doris", false, 18, 3, true};
 
-    myDog.print(); 
+    //myDog.print(); 
+
+    vector<Dog> elisDogs;
+
+    Dog hisFirstDog{ "Max", false, 22, 5, false };
+
+    Dog hisSecondDog{ "Ruby", false, 23, 5, true };
+
+    elisDogs.push_back(hisFirstDog);
+    elisDogs.push_back(hisSecondDog);
+
+    for (Dog& theDog : elisDogs)
+    {
+        theDog.print(); 
+    }
+
 
 
     return 0;
