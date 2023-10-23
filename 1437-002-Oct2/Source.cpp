@@ -1,6 +1,11 @@
 #include <iostream>
 #include "Vehicle.h"
 
+#include<Windows.h>
+#include<mmsystem.h>
+
+#pragma comment(lib, "winmm.lib") 
+
 
 //class Hat
 //{
@@ -110,6 +115,18 @@ public:
         someTailObject.print(); 
         someNose.print(); 
     }
+
+    void bark1()
+    {
+        PlaySound(TEXT("C:/Users/Work/Downloads/bark.wav"), NULL,
+            SND_FILENAME | SND_SYNC);
+    }
+
+    void bark2()
+    {
+        PlaySound(TEXT("C:/Users/Work/Downloads/bark2.wav"), NULL,
+            SND_FILENAME | SND_SYNC);
+    }
 }; //end of Dog class definition
 
 
@@ -158,6 +175,24 @@ int main()
         theDog.print(); 
     }
 
+    cout << "\n\nSelect dog number: " << endl; 
+    int dogNumber; 
+    cin >> dogNumber; 
+
+    if (dogNumber == 1)
+    {
+        hisFirstDog.bark1(); 
+    }
+
+    else if (dogNumber == 2)
+    {
+        hisSecondDog.bark2(); 
+    }
+
+    else
+    {
+        cout << "That dog doesn't exist!" << endl; 
+    }
 
 
     return 0;
